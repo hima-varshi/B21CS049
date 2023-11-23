@@ -117,3 +117,49 @@ Welcome to the XV Quiz for CSL 3030 - Operating Systems!
 
 ## Answers
 Please write your answers here
+
+1. b. A Unix-like operating system
+2. c. BSD
+3. d. simple
+4. b. As interrupts
+5. a. 128
+6. c. Sh
+7. a. Round-robin scheduling
+8. a. Paging
+9. d. Both b and c
+10. b. No
+11. c. MIT
+12. Process states in XV6:
+    Runnable: Processes that are ready to execute but waiting for the CPU.
+    Running: The currently executing process.
+    Sleeping: Processes waiting for an event (like I/O) to occur.
+    Zombie: Processes that have finished execution but still have an entry in the process table.
+13. File System Structure in XV6 is hierarchical similar to Unix.XV6's file system structure consists of 
+    - inodes (store file metadata)
+    - blocks (store file content)
+    - directories (maps names to inodes) 
+14. System Calls vs. Library Functions:
+    System calls - Requests to the operating system for services like file manipulation, process control, etc. 
+                   Examples in XV6 include fork(), exit().
+    Library functions - Built-in functions that applications can use, often wrapping system calls for ease of use.
+                        Examples include printf() or fopen().
+15. Memory Paging in XV6:
+    Paging in XV6 involves dividing memory into fixed-size pages, allowing non-contiguous allocation. 
+    It ensures efficient memory usage by loading only necessary pages into memory which leads to the reduction of external storage access time.
+16. Essential Shell Commands in XV6:
+    ls - Lists directory contents.
+    cd - Changes the current directory.
+    mkdir - Creates a new directory.
+17. Process Synchronization in XV6:
+    Process synchronization ensures orderly execution and shared resource access among concurrent processes. 
+    Techniques like locks, semaphores, or atomic operations are used to prevent race conditions and maintain data consistency.
+18. Interrupt Handling in XV6:
+    Interrupts in XV6 are managed through interrupt handlers. 
+    They allow the system to respond to asynchronous events such as I/O completion or hardware signals. 
+    Interrupt Service Routines handle these interrupts to perform necessary actions.
+19. Virtual Memory in XV6:
+    Virtual memory provides processes with an illusion of a larger memory space than physically available. 
+    XV6 uses paging to implement virtual memory, offering benefits like efficient memory utilization and protection from unauthorized access.
+20. Boot Process in XV6:
+    The boot process involves loading the bootloader (e.g., the Multiboot-compliant bootloader) into memory, which then loads the XV6 kernel. 
+    The kernel initializes hardware, sets up memory management, and launches the first user-level process. 
